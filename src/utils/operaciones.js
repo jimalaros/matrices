@@ -23,7 +23,7 @@ const generarMatriz = (n) => {
     return numeros;
 }
 
-exports.generarTranspuesta = (n) => {
+const generarTranspuesta = (n) => {
     const resultado = generarMatriz(n);
 
     let transformacion = math.matrix(resultado);
@@ -33,3 +33,5 @@ exports.generarTranspuesta = (n) => {
 
     return "Matriz: " + matriz + " Transpuesta: " + matrizTranspuesta;
 }
+    
+module.exports = { generarMatriz, generarTranspuesta }
