@@ -1,6 +1,8 @@
 const http = require("http");
 const { generarTranspuesta } = require("./utils/operaciones");
 
+const PORT = process.env.PORT || 3000;
+
 const matrices = (req, res) => {
     let { url } = req;
     
@@ -31,5 +33,6 @@ const server = http.createServer((req, res) => {
     }
 });
 
-server.listen(3000);
-console.log("Server on port", 3000);
+server.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
