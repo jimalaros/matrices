@@ -8,9 +8,7 @@ exports.matrices = (req, res) => {
 
     if(n!='favicon.ico') {
         res.setHeader('Access-Control-Allow-Origin', '*');
-        res.setHeader('Access-Control-Allow-setHeaders', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
-        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-        res.setHeader('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+        res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
         res.writeHead(200, { "Content-Type": "application/json" });
         res.write(generarTranspuesta(n));
         res.end();
