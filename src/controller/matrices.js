@@ -7,10 +7,9 @@ exports.matrices = (req, res) => {
     let n = url.split("/")[1];
 
     if(n!='favicon.ico') {
-        res.writeHead(200, { "Content-Type": "text/plain" });
+        res.writeHead(200, { "Content-Type": "application/json" });
         res.write(generarTranspuesta(n));
         res.end();
     }
-    
     
 };
