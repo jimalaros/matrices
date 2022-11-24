@@ -10,7 +10,7 @@ exports.matrices = (req, res) => {
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
         res.writeHead(200, { "Content-Type": "application/json" });
-        res.write(generarTranspuesta(n));
+        res.write(JSON.stringify(generarTranspuesta(n)));
         res.end();
     }
     
